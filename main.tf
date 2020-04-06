@@ -21,7 +21,6 @@ data "google_container_engine_versions" "region" {
 }
 
 resource "google_container_cluster" "main" {
-  provider                    = google-beta
   enable_binary_authorization = true
   initial_node_count          = 1
   location                    = var.region
