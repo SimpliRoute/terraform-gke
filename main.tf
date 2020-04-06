@@ -7,6 +7,12 @@ locals {
   project = var.project == "" ? data.google_project.default.project_id : var.project
 }
 
+provider "google" {
+  project = var.project
+  region = var.region
+}
+
+
 data "google_project" "default" {
 }
 
