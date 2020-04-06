@@ -25,6 +25,7 @@ resource "google_container_cluster" "main" {
   enable_binary_authorization = true
   initial_node_count          = 1
   location                    = var.region
+  region                      = var.region
   logging_service             = var.logging_service
   min_master_version          = local.kubernetes_version
   monitoring_service          = var.monitoring_service
