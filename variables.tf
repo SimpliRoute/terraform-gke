@@ -97,6 +97,7 @@ variable "project" {
 }
 
 variable "region" {
+  default = "us-central1"
   description = "Region to create the cluster"
 }
 
