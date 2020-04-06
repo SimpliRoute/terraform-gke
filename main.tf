@@ -43,11 +43,6 @@ resource "google_container_cluster" "main" {
     http_load_balancing {
       disabled = false == var.enable_http_load_balancing_addon
     }
-
-    kubernetes_dashboard {
-      # GKE Dashboard is deprecated
-      disabled = true
-    }
   }
 
   ip_allocation_policy {
